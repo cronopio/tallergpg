@@ -546,12 +546,13 @@ http://doc.ubuntu-es.org/C%C3%B3mo_firmar_el_C%C3%B3digo_de_Conducta_con_Seahors
 |!Rama v1|!Rama v2|
 | ''1.4.12'' | ''2.0.19''|</pre>
 </div>
-<div title="Iniciando" creator="cronopio" modifier="cronopio" created="201204291716" modified="201204291951" tags="gpg" changecount="19">
+<div title="Iniciando" creator="cronopio" modifier="cronopio" created="201204291716" modified="201204291931" tags="gpg" changecount="14">
 <pre>!Generando llaves
 Las llaves pueden ser generadas usando directamente el comando ''gpg'' o usando cualquiera de las interfaces.
 {{{
 gpg --gen-key
 }}}
+
 !! Datos Necesarios
 *''Nombre'': El identificador que queramos para esta llave en especifico. Si va a ser su llave principal recomendamos aqui poner su nombre completo.
 *''Correo Electronico'': Normalmente la llave esta asociada a un correo electronico para saber quien podria ser el dueño.
@@ -563,22 +564,7 @@ gpg --gen-key
 **Es larga.
 **Tiene caracteres especiales (!&quot;#$%&amp;/()=)
 **Es dificil de adivinar
-**Es facil de recordar para usted
-
-!Listando mis claves
-Si usas una interfaz grafica, es probable que con solo abrir la interfaz se vea el listado de las llaves, recuerda que puedes crear cuantas llaves quieras.
-Si por el contrario disfrutas usando la interfaz de comandos, por rapida o por poderosa aqui esta el comando necesario:
-{{{
-gpg --list-keys
-}}}
-Mostrará
-{{{
-/home/cronopio/.gnupg/pubring.gpg
----------------------------------
-pub   2048R/C255D68B 2012-04-29 [caduca: 2012-05-06]
-uid                  Primera Llave &lt;notiene@uncorreo.com&gt;
-sub   2048R/705D999A 2012-04-29 [caduca: 2012-05-06]
-}}}</pre>
+**Es facil de recordar para usted</pre>
 </div>
 <div title="Instalacion" creator="cronopio" modifier="cronopio" created="201204291627" modified="201204291718" tags="gpg" changecount="12">
 <pre>!!Debian

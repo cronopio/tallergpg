@@ -510,33 +510,6 @@ Also see [[AdvancedOptions]]</pre>
 <div title="DefaultTiddlers" creator="cronopio" modifier="cronopio" created="201204281808" changecount="1">
 <pre>[[Introduccion Inicial]]</pre>
 </div>
-<div title="Enlaces de Interes" creator="cronopio" modifier="cronopio" created="201204291936" tags="links gpg" changecount="1">
-<pre>http://www.gnupg.org/
-
-http://www.gnupg.org/documentation/index.en.html
-
-http://www.dewinter.com/gnupg_howto/english/GPGMiniHowto.html
-
-http://www.gnupg.org/gph/en/manual.html
-
-http://www.gnupg.org/faq/GnuPG-FAQ.html
-
-https://help.ubuntu.com/community/GnuPrivacyGuardHowto
-
-http://www.debian.org/doc/manuals/debian-reference/ch-gnupg.es.html
-
-http://wiki.debian.org/Keysigning
-
-http://moser.cm.nctu.edu.tw/gpg.html
-
-http://www.infodrom.org/Debian/doc/gnupg.html
-
-http://fedoraproject.org/wiki/Creating_GPG_Keys
-
-http://support.real-time.com/open-source/kgpg/index.html
-
-http://doc.ubuntu-es.org/C%C3%B3mo_firmar_el_C%C3%B3digo_de_Conducta_con_Seahorse</pre>
-</div>
 <div title="GnuPG" creator="cronopio" modifier="cronopio" created="201204291718" modified="201204291722" changecount="4">
 <pre>GnuPG es la herramienta de software libre para comunicacion ''segura'', puede ser usada para cifrar archivos y/o mensajes ademas como para firmar digitalmente algun material.
 
@@ -546,39 +519,20 @@ http://doc.ubuntu-es.org/C%C3%B3mo_firmar_el_C%C3%B3digo_de_Conducta_con_Seahors
 |!Rama v1|!Rama v2|
 | ''1.4.12'' | ''2.0.19''|</pre>
 </div>
-<div title="Iniciando" creator="cronopio" modifier="cronopio" created="201204291716" modified="201204291951" tags="gpg" changecount="19">
+<div title="Iniciando" creator="cronopio" modifier="cronopio" created="201204291716" modified="201204291753" tags="gpg" changecount="11">
 <pre>!Generando llaves
 Las llaves pueden ser generadas usando directamente el comando ''gpg'' o usando cualquiera de las interfaces.
 {{{
 gpg --gen-key
 }}}
+
 !! Datos Necesarios
 *''Nombre'': El identificador que queramos para esta llave en especifico. Si va a ser su llave principal recomendamos aqui poner su nombre completo.
 *''Correo Electronico'': Normalmente la llave esta asociada a un correo electronico para saber quien podria ser el dueño.
 *''Comentario'' (opcional): Puede agregar un comentario cualquiera para cada llave. Normalmente se pone aca el proposito de la llave
 *''Fecha de Expiracion'' de la llave: Es muy util que despues de cierto tiempo la llave expire y tenga que nuevamente generar una nueva. Ayuda en cuanto pierde la llave privada.
-*''Algoritmo'' [RSA | DSA | ~ElGamal | RSA y DSA | DSA y ~ElGamal]: El algoritmo preferido para la llave, la recomendacion es escojer RSA y DSA
-*''Tamaño llave'' (Keysize): El tamaño se refiere a la cantidad de bytes de //entropia// que tendra la llave, entre más grande sea el tamaño más segura será la llave.
-*''Clave'' (passphrase): La clave o //passphrase// es una contraseña que sera solicitada en cualquier momento que la llave se intente usar. Normalmente no es una palabra si no una frase. Recuerde que una buena clave debe contener los siguientes elementos:
-**Es larga.
-**Tiene caracteres especiales (!&quot;#$%&amp;/()=)
-**Es dificil de adivinar
-**Es facil de recordar para usted
-
-!Listando mis claves
-Si usas una interfaz grafica, es probable que con solo abrir la interfaz se vea el listado de las llaves, recuerda que puedes crear cuantas llaves quieras.
-Si por el contrario disfrutas usando la interfaz de comandos, por rapida o por poderosa aqui esta el comando necesario:
-{{{
-gpg --list-keys
-}}}
-Mostrará
-{{{
-/home/cronopio/.gnupg/pubring.gpg
----------------------------------
-pub   2048R/C255D68B 2012-04-29 [caduca: 2012-05-06]
-uid                  Primera Llave &lt;notiene@uncorreo.com&gt;
-sub   2048R/705D999A 2012-04-29 [caduca: 2012-05-06]
-}}}</pre>
+*''Algoritmo'' [DSA | ~ElGamal | Ambos]: El algoritmo preferido para la llave, si elije ambos, se crearan virtualmente dos llaves una por cada algoritmo, esto es transparente al usuario y recomendado.
+</pre>
 </div>
 <div title="Instalacion" creator="cronopio" modifier="cronopio" created="201204291627" modified="201204291718" tags="gpg" changecount="12">
 <pre>!!Debian
