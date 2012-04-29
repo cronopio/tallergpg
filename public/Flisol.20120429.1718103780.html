@@ -510,31 +510,11 @@ Also see [[AdvancedOptions]]</pre>
 <div title="DefaultTiddlers" creator="cronopio" modifier="cronopio" created="201204281808" changecount="1">
 <pre>[[Introduccion Inicial]]</pre>
 </div>
-<div title="GnuPG" creator="cronopio" modifier="cronopio" created="201204291718" modified="201204291722" changecount="4">
-<pre>GnuPG es la herramienta de software libre para comunicacion ''segura'', puede ser usada para cifrar archivos y/o mensajes ademas como para firmar digitalmente algun material.
-
-[[Pagina Oficial www.gnupg.org | http://www.gnupg.org/]]
-
-!!! Ultimas Versiones
-|!Rama v1|!Rama v2|
-| ''1.4.12'' | ''2.0.19''|</pre>
-</div>
-<div title="Iniciando" creator="cronopio" modifier="cronopio" created="201204291716" modified="201204291753" tags="gpg" changecount="11">
+<div title="Iniciando" creator="cronopio" modifier="cronopio" created="201204291716" changecount="1">
 <pre>!Generando llaves
-Las llaves pueden ser generadas usando directamente el comando ''gpg'' o usando cualquiera de las interfaces.
-{{{
-gpg --gen-key
-}}}
-
-!! Datos Necesarios
-*''Nombre'': El identificador que queramos para esta llave en especifico. Si va a ser su llave principal recomendamos aqui poner su nombre completo.
-*''Correo Electronico'': Normalmente la llave esta asociada a un correo electronico para saber quien podria ser el dueño.
-*''Comentario'' (opcional): Puede agregar un comentario cualquiera para cada llave. Normalmente se pone aca el proposito de la llave
-*''Fecha de Expiracion'' de la llave: Es muy util que despues de cierto tiempo la llave expire y tenga que nuevamente generar una nueva. Ayuda en cuanto pierde la llave privada.
-*''Algoritmo'' [DSA | ~ElGamal | Ambos]: El algoritmo preferido para la llave, si elije ambos, se crearan virtualmente dos llaves una por cada algoritmo, esto es transparente al usuario y recomendado.
 </pre>
 </div>
-<div title="Instalacion" creator="cronopio" modifier="cronopio" created="201204291627" modified="201204291718" tags="gpg" changecount="12">
+<div title="Instalacion" creator="cronopio" modifier="cronopio" created="201204291627" modified="201204291712" tags="gpg" changecount="11">
 <pre>!!Debian
 {{{
 apt-get install gnupg2
@@ -551,8 +531,8 @@ sudo apt-get install gnupg2
 sudo apt-get install seahorse  # Gnome
 sudo apt-get install kgpg      # Kde
 }}}
-!!~OpenSUSE
-En ~OpenSUSE se cuenta con la la utilidad Yast, asi que simplemente entrando en esta herramienta y dando click en ''Administracion de Software'' o ''Software Managment'' alli deben buscar el paquete ''gpg2'' e instalarlo.
+!!OpenSUSE
+En OpenSUSE se cuenta con la la utilidad Yast, asi que simplemente entrando en esta herramienta y dando click en ''Administracion de Software'' o ''Software Managment'' alli deben buscar el paquete ''gpg2'' e instalarlo.
 
 Desde la consola tambien se puede hacer facilmente:
 {{{
@@ -586,8 +566,9 @@ GnuPG es una herramienta para la comunicación segura. Este taller es una guía 
 
 Para continuar instale ''GnuPG'' usando su gestor de paquetes favorito, las instrucciones las encuentra en el articlo de [[Instalacion]], despues de instalar el paquete continue con el articulo [[Iniciando]]</pre>
 </div>
-<div title="MainMenu" creator="cronopio" modifier="cronopio" created="201204281709" modified="201204291723" changecount="2">
-<pre>[[Introduccion Inicial]]
+<div title="MainMenu" creator="cronopio" modifier="cronopio" created="201204281709" changecount="1">
+<pre>[[GettingStarted]]
+[[Introduccion Inicial]]
 [[Instalacion]]</pre>
 </div>
 <div title="SiteSubtitle" creator="cronopio" modifier="cronopio" created="201204281708" changecount="1">
