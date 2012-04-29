@@ -546,7 +546,7 @@ http://doc.ubuntu-es.org/C%C3%B3mo_firmar_el_C%C3%B3digo_de_Conducta_con_Seahors
 |!Rama v1|!Rama v2|
 | ''1.4.12'' | ''2.0.19''|</pre>
 </div>
-<div title="Iniciando" creator="cronopio" modifier="cronopio" created="201204291716" modified="201204292027" tags="gpg" changecount="26">
+<div title="Iniciando" creator="cronopio" modifier="cronopio" created="201204291716" modified="201204291955" tags="gpg" changecount="21">
 <pre>!Generando llaves
 Las llaves pueden ser generadas usando directamente el comando ''gpg'' o usando cualquiera de las interfaces.
 {{{
@@ -559,7 +559,7 @@ gpg --gen-key
 *''Fecha de Expiracion'' de la llave: Es muy util que despues de cierto tiempo la llave expire y tenga que nuevamente generar una nueva. Ayuda en cuanto pierde la llave privada.
 *''Algoritmo'' [RSA | DSA | ~ElGamal | RSA y DSA | DSA y ~ElGamal]: El algoritmo preferido para la llave, la recomendacion es escojer RSA y DSA
 *''Tamaño llave'' (Keysize): El tamaño se refiere a la cantidad de bytes de //entropia// que tendra la llave, entre más grande sea el tamaño más segura será la llave.
-*''Clave'' (passphrase): La clave o //passphrase// es una contraseña que sera solicitada en cualquier momento que la llave ''privada'' se intente usar. Normalmente no es una palabra si no una frase. Recuerde que una buena clave debe contener los siguientes elementos:
+*''Clave'' (passphrase): La clave o //passphrase// es una contraseña que sera solicitada en cualquier momento que la llave se intente usar. Normalmente no es una palabra si no una frase. Recuerde que una buena clave debe contener los siguientes elementos:
 **Es larga.
 **Tiene caracteres especiales (!&quot;#$%&amp;/()=)
 **Es dificil de adivinar
@@ -590,55 +590,7 @@ Mostrará
 pub   2048R/C255D68B 2012-04-29 [caduca: 2012-05-06]
 uid                  Primera Llave &lt;notiene@uncorreo.com&gt;
 sub   2048R/705D999A 2012-04-29 [caduca: 2012-05-06]
-}}}
-!Compartiendo mi llave pública
-Despues de creadas las llaves lo mas util es compartir tu llave publica para que alguien pueda contactarte de manera segura, o pueda enviarte algun archivo cifrado. Adicionalmente tu llave pública podra ser firmada por los demas, pero eso lo veremos mas adelante.
-Recuerda tener a la mano el ID de la llave creada, en el ejemplo anterior el ID obtenido fue @@~C255D68B@@
-La clave la podemos exportar como un archivo binario.
-{{{
-gpg --output /tmp/archivo.gpg --export C255D68B
-}}}
-Pero a veces estos archivos binarios son dificiles de enviar por correo o dificiles de publicar en alguna página web o foro. Asi que otra opcion es exportar la llave usando texto plano, en ese caso necesitaremos usar la opción {{{ --armor }}}
-{{{
-gpg --armor --output /tmp/archivoPlano.txt --export C255D68B
-}}}
-Si todo marcha bien podremos ver que el contenido del archivoPlano.txt tendra algo como:
-{{{
------BEGIN PGP PUBLIC KEY BLOCK-----
-Version: GnuPG v2.0.19 (GNU/Linux)
-
-mQENBE+dmyUBCAC3n5wLVSyPf6edPJ6KB8fhKKUVh58WO0Pq95fyb6/SdvICWJVV
-uQcOP+5HlTwsFL1Zyj81jFYfebaiHK4jyuP+DrLV5r3cL6VrmFdGEJ0OU+Prfi/B
-ub41qiprK3iC129tz4dB2qXP+14gIk+ldH/tIiFvfLPL1HewgAMBlDM0ZSKEJZ2L
-2D2fMRgoLKVUZgmJMiJ+mBPkismNZyCEf5B4w+RPuRcPOy0tYpf/FiJySi0gnJb9
-/zhebQnL4cmz0pyE4MmbnFT+QQJq0Mo7WJt6z9h9ycO8KFkLQGrol2tsItyzOE00
-aE3NDz5kqPkp8Xrdh0jjyL6avRFwBqGwq/n/ABEBAAG0JFByaW1lcmEgTGxhdmUg
-PG5vdGllbmVAdW5jb3JyZW8uY29tPokBPgQTAQIAKAUCT52bJQIbAwUJAAk6gAYL
-CQgHAwIGFQgCCQoLBBYCAwECHgECF4AACgkQZISphsJV1otXOgf/V5CvhJ2sbNrj
-2mgN1JK58ArI5/K26tkeNBcV6wpBt9fOz3BqIRnXW8FsCDnE3iiPUswxpGPnn8nH
-+ylavjhhSSOOnGhdfv33M/kYyW+r2HzktseH/9EYuzTYKOeg+tPG403xRvt+g8e8
-hqQp9AxKRBWl18P3tJf19WTELvKYSgq1MHZ2o47y7H8qZJaWknadEoc03OucsbPH
-cH0Pfz9SpXcI12sFjiCMo2Oh7neuL0eAseMabjNhTTJV3gUtuPmLDpoC4Yq+6ZQf
-hm2gal5ow8DPnf46eF7WQENdHHDb1i1ncfwJ9B/TaAOJRusM1t6dRLJBMvgkGaSj
-nCSYOxYJALkBDQRPnZslAQgA2IOMKpHXStY2YdpEDKtjl22SMUyDUDPw0uYXR2OP
-tQv4UdHmkAYA6UavbVK091kwl7Hevzf4KCuP21/xoRDeLiYQuEbziKwNoOKp2aVA
-OanxxzseaHBskHkp4b24esxNra/EMDXDGzHs/20CitFYypEX+pf+fGhozroGn3No
-0zvlzfJCyNvOYU6hLiM5b8N9qCtBpZ6Lv3Pxk+AJbMWK2CdwGvN9fp/+ISEBRXfF
-A95vUEvQqitkcg+2OlPKd6uCJX1KqMH8Jjp98qr6+lDrHSCtb+27ufZoaxSrW7qO
-jX8+lwEf6j+99qOtqvpV8biiCFEWBhQNtvcuz+5wsen/iQARAQABiQElBBgBAgAP
-BQJPnZslAhsMBQkACTqAAAoJEGSEqYbCVdaLIcYIAJ+5tQuW95J+ZwHJcJGNN0VY
-pCXprua1vTAxrl1V/BkqzGOasgR5ox3J3LTMLm7gozq21DHfmW0MaMgU2C4JppD0
-q6d5Uj/r69mgRw5jWsPUAh/4lKq5Y1d9lKZNignXk8xzTij3pXYJU09hNNW9OK7U
-6JSDZeDqOz9lj4VdBaQl8qwaItuFGcSz5wKgh7xxctLGp14uKEFSzWAYNBW/fZB4
-Na4A1VFezsHE4BSiNRtPXCcASYKqhk04QeoKU3LO/w6DjM087koDUuSN5Wz+HgKd
-7WyyCtGnsdXjR5jAlIT5/5OQ7hxx93Y6K0vQ/XOFyzlIjN8jdN2QcyagxxbMDd8=
-=LRcv
------END PGP PUBLIC KEY BLOCK-----
-}}}
-Ahora con esta información y/o con este archivo las demas personas podran cifrar mensajes usando su llave pública.
-!!Subiendo la llave a un servidor publico.
-
-!Importando llaves de otros</pre>
+}}}</pre>
 </div>
 <div title="Instalacion" creator="cronopio" modifier="cronopio" created="201204291627" modified="201204291718" tags="gpg" changecount="12">
 <pre>!!Debian
