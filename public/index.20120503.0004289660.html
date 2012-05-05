@@ -507,68 +507,12 @@ Also see [[AdvancedOptions]]</pre>
 </div>
 <!--POST-SHADOWAREA-->
 <div id="storeArea">
-<div title="Cifrando" creator="cronopio" modifier="cronopio" created="201205020216" modified="201205030040" tags="gpg" changecount="7">
+<div title="Cifrando" creator="cronopio" modifier="cronopio" created="201205020216" tags="gpg" changecount="1">
 <pre>Si leyo con cuidado lo explicado en [[Iniciando]] y ya tiene sus llaves creadas, entonces ya puede cifrar documentos y/o conversaciones.
 
 Recuerde que si desea enviar a otra persona de manera segura un documento/mensaje debe ustede tener importada la llave del destinatario.
 
-Tambien tenga en cuenta que como usted tiene una llave publica tambien puede cifrar documentos/mensajes con su llave publica y hacer que unicamente pueda ser descifrada por usted mismo.
-
-!Cifrando usando mis llaves
-Si usa su propia llave publica para cifrar un documento/mensaje entonces solo usando su llave privada podra descifrar el mensaje. Util cuando necesitamos guardar informacion unicamente para nosotros.
-
-''Recuerde:'' Al igual que en otros comandos tenga a la mano el ID de su llave publica
-
-!! Cifrando
-Digamos que tenemos un archivo llamado {{{mensaje.txt}}}
-{{{
-gpg --encrypt mensaje.txt
-}}}
-Este comando nos preguntara el ID de la llave que queremos usar para cifrar este archivo, despues de ingresar el ID vuelve a teclar enter. Al final se generara el archivo {{{mensaje.txt.gpg}}} que es nuestro archivo cifrado.
-
-!! Descifrando
-Despues de tener un archivo cifrado como {{{mensaje.txt.gpg}}} podremos decifrarlo usando:
-{{{
-gpg --decrypt mensaje.txt.gpg
-}}}
-Esto nos mostrara en pantalla el contenido descifrado del archivo, si depronto deseamos guardar el mensaje plano entonces podemos redireccionar la salida del comando asi:
-{{{
-gpg --output descifrado.txt --decrypt mensaje.txt.gpg
-}}}
-
-!Cifrando para enviar a otra persona
-En este caso queremos cifrar un documento/mensaje usando la llave publica de algun conocido, para esto necesita ya haber importado la llave (mire [[Iniciando]] para mas info) del destinatario del mensaje.
-
-Miremos como se ve el listado de llaves ({{{--list-keys}}}) cuando ya tenemos la llave importada
-{{{
-/home/cronopio/.gnupg/pubring.gpg
----------------------------------
-pub   2048R/C255D68B 2012-04-29 [caduca: 2012-05-06]
-uid                  Primera Llave &lt;notiene@uncorreo.com&gt;
-sub   2048R/705D999A 2012-04-29 [caduca: 2012-05-06]
-
-pub   2048R/802D8FD5 2012-05-03 [caduca: 2012-05-08]
-uid                  Mi Amigo &lt;miamigo@sucorreo.com&gt;
-sub   2048R/0BB37DDB 2012-05-03 [caduca: 2012-05-08]
-}}}
-El destinatario del mensaje secreto es mi amigo que tiene el correo {{{miamigo@sucorreo.com}}}
-
-!! Cifrando
-Vamos a continuar usando como ejemplo el archivo {{{mensaje.txt}}} y a generar el archivo {{{secreto.gpg}}} que enviaremos al destinatario usando algun medio de comunicacion inseguro como es el correo electronico.
-En este caso podemos usar el ''correo del destinatario'' como referencia a la llave.
-{{{
-gpgp --output secreto.gpg --encrypt --recipient miamigo@sucorreo.com mensaje.txt
-}}}
-
-!! Descifrando
-Despues de que el archivo {{{secreto.gpg}}} llegue al destinatario, podra decifrarlo usando:
-{{{
-gpg --decrypt secreto.gpg
-}}}
-Esto le mostrara en pantalla el contenido descifrado del archivo, si depronto desea guardar el mensaje plano entonces podemos redireccionar la salida del comando asi:
-{{{
-gpg --output descifrado.txt --decrypt secreto.gpg
-}}}</pre>
+Tambien tenga en cuenta que como usted tiene una llave publica tambien puede cifrar documentos/mensajes con su llave publica y hacer que unicamente pueda ser descifrada por usted mismo.</pre>
 </div>
 <div title="ColorPalette" creator="cronopio" modifier="cronopio" created="201205020456" modified="201205020512" changecount="9">
 <pre>Background: #E5ECFF
