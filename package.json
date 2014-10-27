@@ -1,6 +1,6 @@
 {
   "name": "tallergpg",
-  "version": "0.0.0",
+  "version": "0.0.0-1",
   "description": "GPG para seres humanos. =========",
   "main": "index.js",
   "scripts": {
