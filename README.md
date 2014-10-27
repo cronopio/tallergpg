@@ -18,7 +18,7 @@ Este codigo esta hecho sobre la libreria de [Node.js](http://nodejs.org/) llamad
 Asi que si desea correr esto como un servidor web y permitir la lectura por los demas equipos en red deberá tener [Node.js](http://nodejs.org/) y [NPM](http://npmjs.org/) funcionando corrrectamente y ejecutar el comando:
 
 ```
-./bin/http-server
+npm start
 ```
 Podra acceder al wiki como **solo lectura** entrando a ```http://localhost:8080```
 
